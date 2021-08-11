@@ -32,7 +32,7 @@ function App() {
     await setExecute(true);
     const token =  await createSubmission(language.key, Base64.encode(code), Base64.encode(inputText));
     // console.log(token)
-    const res = await getSubmission(token?.token);
+    const res = await getSubmission(token);
     await setResult(res)
     // console.log(res)
     setExecute(false);
